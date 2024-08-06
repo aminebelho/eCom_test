@@ -23,7 +23,7 @@ function ProductDetail() {
     <div>
       <h1>{product.name}</h1>
       <p>Price: ${product.price}</p>
-      <p>Size: {product.size}</p>
+      <p>Size: ${product.size}</p>
       <input
         type="number"
         value={quantity}
