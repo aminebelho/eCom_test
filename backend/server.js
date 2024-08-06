@@ -7,10 +7,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/eCom_test', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb://localhost:27017/eCom_test')
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('Connection error:', err));
+
 
 const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
